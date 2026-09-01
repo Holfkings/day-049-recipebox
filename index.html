@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RecipeBox — Buscador de Recetas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="brand">
+        <span class="logo">🍳</span>
+        <span class="name">Recipe<span class="gold">Box</span></span>
+      </div>
+      <nav class="nav">
+        <button class="nav-btn active" data-view="explore">Explorar</button>
+        <button class="nav-btn" data-view="favorites">Favoritos <span id="favCount">0</span></button>
+      </nav>
+    </header>
+
+    <section class="search-section">
+      <input type="text" id="searchInput" placeholder="Buscar recetas por nombre o ingrediente..." />
+      <div class="filter-tags" id="tagFilters"></div>
+    </section>
+
+    <section id="exploreView" class="view">
+      <div id="recipesGrid" class="recipes-grid"></div>
+    </section>
+
+    <section id="favoritesView" class="view hidden">
+      <div id="favoritesGrid" class="recipes-grid"></div>
+    </section>
+
+    <div id="recipeModal" class="modal hidden">
+      <div class="modal-content recipe-detail">
+        <button id="closeModal" class="close-btn">×</button>
+        <div id="recipeContent"></div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <span>Buscador de recetas con favoritos · Reto #100DíasEnGitHub por @Holfkings</span>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
